@@ -10,6 +10,7 @@ steps:
 - script: |
     xcodebuild -version
     ls -l /Applications/
+    system_profiler SPHardwareDataType
   displayName: 'xcode version'
   
 - script: /usr/local/bin/pod install
