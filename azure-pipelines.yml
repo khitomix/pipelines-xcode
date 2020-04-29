@@ -4,9 +4,14 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 
 pool:
-  vmImage: 'macOS-latest'
+  vmImage: 'macOS-10.14'
 
 steps:
+- script: |
+    xcodebuild -version
+    ls -l /Applications/
+  displayName: 'xcode version'
+ 
 - task: Xcode@5
   inputs:
     scheme: ''
